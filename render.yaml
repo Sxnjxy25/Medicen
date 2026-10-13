@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: medistock
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: PORT
+        value: "8080"
+      - key: DATABASE_URL
+        value: jdbc:postgresql://dpg-d9dob3laeets739mcapg-a.oregon-postgres.render.com:5432/medistock_3a9z?sslmode=require
+      - key: DATABASE_USERNAME
+        value: medistock_3a9z_user
+      - key: DATABASE_PASSWORD
+        value: F14vKDPFT6IyieXebFA7tC94LlnvcgbK
